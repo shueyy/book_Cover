@@ -1,0 +1,224 @@
+.book{
+    width: 500px;
+    height: 700px;
+    background: #2a0134;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.boxes{
+    border: whitesmoke dashed 20px;
+    position: absolute;
+    opacity: 0.3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 75% 0;
+}
+
+.boxers1{
+    width: 370px;
+    height: 370px;
+}
+
+.boxers2{
+    width: 400px;
+    height: 400px;
+}
+
+.boxers3{
+    width: 430px;
+    height: 430px;
+}
+
+.boxers4{
+    width: 460px;
+    height: 460px;
+}
+
+.boxers5{
+    width: 490px;
+    height: 490px;
+}
+
+.boxers6{
+    width: 520px;
+    height: 520px;
+}
+
+.boxers7{
+    width: 550px;
+    height: 550px;
+}
+
+.boxers8{
+    width: 580px;
+    height: 580px;
+}
+
+.boxers9{
+    width: 610px;
+    height: 610px;
+}
+
+.boxers10{
+    width: 640px;
+    height: 640px;
+}
+
+.boxers11{
+    width: 670px;
+    height: 670px;
+}
+
+.boxers12{
+    width: 700px;
+    height: 700px;
+}
+
+.boxers13{
+    width: 730px;
+    height: 730px;
+}
+
+.boxers14{
+    width: 760px;
+    height: 760px;
+}
+
+.boxers15{
+    width: 790px;
+    height: 790px;
+}
+
+.eye{
+    width: 300px;
+    height: 300px;
+    background: purple;
+    border: whitesmoke solid 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 75% 0;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0px 0px 100px 100px rgb(176, 0, 176);
+}
+
+.lid{
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 1;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.lid span{
+    display:block;
+    width: 100%;
+    height: 0%;
+    background: whitesmoke;
+    border-radius: 0 0 60% 60%;
+    transition: 0.1s;
+}
+
+.eye:active .lid span{
+    height: 100%;
+}
+
+.iris{
+    width: 100px;
+    height: 100px;
+    background: purple;
+    border: whitesmoke solid 75px;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: move1 10s infinite cubic-bezier(0.075, 0.82, 0.165, 1) alternate,
+    move2 10s infinite cubic-bezier(0.075, 0.82, 0.165, 1) alternate,
+    move3 10s infinite cubic-bezier(0.075, 0.82, 0.165, 1) alternate;
+    animation-delay: 1s;
+}
+
+@keyframes move1 {
+    0%{transform: translate(-50%, -50%) translate(0px, 0px);}
+    25%{transform: translate(-50%, -50%) translate(15px, -10px);}
+    50%{transform: translate(-50%, -50%) translate(-15px, 10px);}
+    75%{transform: translate(-50%, -50%) translate(10px, 15px);}
+    100%{transform: translate(-50%, -50%) translate(-10px, -15px);}
+}
+
+@keyframes move2 {
+    0%{transform: translate(-50%, -50%) translate(0px, 0px);}
+    25%{transform: translate(-50%, -50%) translate(-20px, 5px);}
+    50%{transform: translate(-50%, -50%) translate(20px, -5px);}
+    75%{transform: translate(-50%, -50%) translate(5px, 20px);}
+    100%{transform: translate(-50%, -50%) translate(-5px, -20px);}
+}
+
+@keyframes move3 {
+    0%{transform: translate(-50%, -50%) translate(0px, 0px);}
+    25%{transform: translate(-50%, -50%) translate(10px, -20px);}
+    50%{transform: translate(-50%, -50%) translate(-10px, 20px);}
+    75%{transform: translate(-50%, -50%) translate(-20px, 10px);}
+    100%{transform: translate(-50%, -50%) translate(20px, -10px);}
+}
+
+.light{
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: rgb(136, 203, 37);
+    opacity: 40%;
+    border-radius: 100%;
+    left: 36%;
+    top: 53%;
+    transform: translate(-50%, -50%);
+}
+
+.author{
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: whitesmoke;
+}
+
+.author::after{
+    content: 'ORWELL';
+    font-size: 70px;
+    position: absolute;
+    color: rgb(136, 203, 37);
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: shift 2s cubic-bezier(0.075, 0.82, 0.165, 1), hover;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shift{
+    0%{opacity: 0;}
+    100%{top: 100px; opacity: 1;}
+}
+
+.title{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    font-size: 150px;
+    color: rgb(134, 210, 22);
+}
